@@ -1,0 +1,618 @@
+body {
+  font-family: Raleway, cursive, sans-serif;
+  overflow-x: hidden; }
+
+.highlight {
+  color: #E31B6D; }
+
+section {
+  line-height: 18pt;
+  padding: 100px 0 130px; }
+
+.section-header {
+  font-size: 30pt; }
+  .section-header .heading {
+    color: #444649;
+    font-family: 'raleway';
+    font-weight: bold; }
+  .section-header hr {
+    color: #444649;
+    border: none;
+    height: 4px;
+    /* Set the hr color */
+    /* old IE */
+    background-color: #444649;
+    /* Modern Browsers */
+    width: 4rem; }
+
+.label-head {
+  font-size: 18pt;
+  color: #616161; }
+
+.btn:hover {
+  background-color: #04C2C9;
+  border-color: #04C2C9; }
+
+.hex1 {
+  width: 100px;
+  height: 100px; }
+
+#color1 {
+  background-color: #04C2C9; }
+
+.hexagon-wrapper {
+  text-align: center;
+  margin: 20 20 0 20px;
+  position: relative;
+  display: inline-block; }
+
+.hexagon {
+  height: 100%;
+  width: calc(100% * 0.57735);
+  display: inline-block; }
+  .hexagon i {
+    position: absolute;
+    top: 28px;
+    font-size: 34pt;
+    color: #fff;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    z-index: 1; }
+
+.hexagon:before {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: '';
+  transform: rotateZ(60deg); }
+
+.hexagon:after {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: '';
+  transform: rotateZ(-60deg); }
+
+#home {
+  position: relative;
+  background-image: url("../img/mountains.jpg");
+  min-height: 600px;
+  height: calc(100vh);
+  background-size: cover; }
+  #home .primary-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    #home .primary-overlay a {
+      border-width: medium; }
+    #home .primary-overlay .cover-head {
+      font-size: 39pt;
+      line-height: 45pt;
+      text-align: center; }
+      #home .primary-overlay .cover-head .resume {
+        color: white;
+        text-decoration: none; }
+    #home .primary-overlay .resume_div a {
+      text-decoration: none;
+      color: #E31B6D;
+      opacity: 0.6; }
+
+.navbar {
+  background: #1B242F;
+  border-bottom: 3.7px solid #04C2C9; }
+  .navbar .nav-item {
+    font-size: initial; }
+    .navbar .nav-item a {
+      color: #fff; }
+    .navbar .nav-item a:hover {
+      color: #E31B6D; }
+    .navbar .nav-item .nav-link.active {
+      color: #E31B6D; }
+
+#about .sub-text {
+  font-size: 1.33rem; }
+
+#about .progress {
+  position: relative;
+  height: 28px;
+  max-width: 100%;
+  font-size: 11pt; }
+  #about .progress .progress-bar {
+    height: 100%;
+    background-color: #00A1A7;
+    transition-timing-function: linear; }
+  #about .progress .progress-type {
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    left: 0;
+    color: #fff;
+    background-color: #04C2C9;
+    justify-content: center; }
+  #about .progress .progress-completed {
+    position: absolute;
+    padding-top: 6px;
+    right: 4px; }
+
+#projects {
+  background-color: #f5f5f5; }
+  #projects .header-list {
+    color: #616161; }
+    #projects .header-list .filter text {
+      cursor: pointer; }
+    #projects .header-list .active {
+      color: white;
+      background-color: #E31B6D;
+      transition: background-color 0.8s;
+      cursor: pointer; }
+  #projects .gallery {
+    margin-left: 20rem;
+    margin-right: 20rem; }
+    #projects .gallery .cap1 {
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      top: 0;
+      left: -100%;
+      padding: 50px;
+      transition: all 0.5s; }
+    #projects .gallery .cap2 {
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      bottom: 0;
+      left: 100%;
+      padding: 20px;
+      transition: all 0.5s; }
+      #projects .gallery .cap2 .button {
+        cursor: pointer; }
+        #projects .gallery .cap2 .button:hover {
+          color: #fff;
+          background-color: #E31B6D;
+          transition: background-color 0.5s; }
+    #projects .gallery img {
+      transition: opacity 0.5s;
+      cursor: pointer; }
+    #projects .gallery .each-item {
+      position: relative;
+      overflow: hidden; }
+      #projects .gallery .each-item .button {
+        border: 2px solid #E31B6D;
+        width: 170px;
+        font-size: 13pt;
+        margin: 0 auto; }
+    #projects .gallery .each-item:hover .image {
+      opacity: 0; }
+    #projects .gallery .each-item:hover .cap1 {
+      left: 0px; }
+    #projects .gallery .each-item:hover .cap2 {
+      left: 0px; }
+
+* {
+  box-sizing: border-box; }
+
+#work {
+  /* The actual timeline (the vertical ruler) */ }
+  #work .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Open sans';
+    /* The circles on the timeline */
+    /* Place the container-timeline to the left */
+    /* Place the container-timeline to the right */
+    /* Add arrows to the left container-timeline (pointing right) */
+    /* Add arrows to the right container-timeline (pointing left) */
+    /* Fix the circle for container-timelines on the right side */ }
+    #work .timeline .container-timeline {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%; }
+      #work .timeline .container-timeline .content {
+        border-color: #00A1A7;
+        border-style: solid;
+        border-width: 5px 0 0 0;
+        padding: 20px 30px;
+        background-color: white;
+        position: relative;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); }
+        #work .timeline .container-timeline .content h3 {
+          color: #444649;
+          font-size: 18pt;
+          font-weight: 300; }
+        #work .timeline .container-timeline .content p {
+          font-size: 10pt;
+          letter-spacing: 1.5px; }
+        #work .timeline .container-timeline .content .date {
+          color: #04C2C9;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 1;
+          margin-bottom: 15px; }
+          #work .timeline .container-timeline .content .date text {
+            position: absolute;
+            right: 2rem; }
+    #work .timeline .container-timeline::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      right: -1.5px;
+      background-color: #00A1A7;
+      top: 27px;
+      border-radius: 50%;
+      z-index: 1; }
+    #work .timeline .left {
+      left: 0; }
+    #work .timeline .right {
+      left: 50%; }
+    #work .timeline .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid white;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent #04C2C9;
+      opacity: 0.5; }
+    #work .timeline .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #04C2C9 transparent transparent;
+      opacity: 0.5; }
+    #work .timeline .right::after {
+      left: -6px; }
+  #work .timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #04C2C9;
+    top: 3rem;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 0; }
+
+#education {
+  background-color: #f5f5f5;
+  /* The actual timeline (the vertical ruler) */ }
+  #education .timeline {
+    font-family: 'Open Sans';
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* The circles on the timeline */
+    /* Place the container-timeline to the left */
+    /* Place the container-timeline to the right */
+    /* Add arrows to the left container-timeline (pointing right) */
+    /* Add arrows to the right container-timeline (pointing left) */
+    /* Fix the circle for container-timelines on the right side */ }
+    #education .timeline .container-timeline {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%; }
+      #education .timeline .container-timeline .content {
+        border-color: #00A1A7;
+        border-style: solid;
+        border-width: 5px 0 0 0;
+        padding: 20px 30px;
+        background-color: white;
+        position: relative;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); }
+        #education .timeline .container-timeline .content h3 {
+          color: #444649;
+          font-size: 18pt;
+          font-weight: 300; }
+        #education .timeline .container-timeline .content p {
+          font-size: 10pt;
+          letter-spacing: 1.5px; }
+        #education .timeline .container-timeline .content .details .date {
+          color: #04C2C9;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 1;
+          text-align: left;
+          margin-bottom: 15px; }
+          #education .timeline .container-timeline .content .details .date span {
+            background-color: #00A1A7;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1;
+            display: inline-block;
+            position: relative;
+            padding: 5px 8px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px; }
+          #education .timeline .container-timeline .content .details .date span::before {
+            content: '';
+            width: 0;
+            height: 0;
+            top: 100%;
+            left: 5px;
+            display: block;
+            position: absolute;
+            border-style: solid;
+            border-width: 0 0 8px 8px;
+            border-color: transparent;
+            border-left-color: #00A1A7; }
+          #education .timeline .container-timeline .content .details .date text {
+            position: absolute;
+            right: 2rem; }
+        #education .timeline .container-timeline .content .details .marks {
+          padding-top: 0px; }
+          #education .timeline .container-timeline .content .details .marks span {
+            font-size: 0.9rem;
+            color: #00A1A7;
+            opacity: 0.7;
+            font-weight: bold; }
+    #education .timeline .container-timeline::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      right: -1.5px;
+      background-color: #00A1A7;
+      top: 27px;
+      border-radius: 50%;
+      z-index: 1; }
+    #education .timeline .left {
+      left: 0; }
+    #education .timeline .right {
+      left: 50%; }
+    #education .timeline .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid white;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent #04C2C9;
+      opacity: 0.5; }
+    #education .timeline .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #04C2C9 transparent transparent;
+      opacity: 0.5; }
+    #education .timeline .right::after {
+      left: -6px; }
+  #education .timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #04C2C9;
+    top: 3rem;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 0; }
+
+#contact {
+  background-color: #252934;
+  padding-top: 0; }
+  #contact .short_msg {
+    font-weight: 600;
+    color: #04C2C9; }
+  #contact .form-map input {
+    background: #1E242C;
+    margin-bottom: 3px;
+    outline: none;
+    border: 0;
+    color: white; }
+  #contact .form-map textarea {
+    background: #1E242C;
+    outline: none;
+    border: 0;
+    color: white; }
+  #contact .form-map #success {
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    transition: height .25s; }
+    #contact .form-map #success div {
+      background: #04c986;
+      color: #157051;
+      font-size: 10pt;
+      font-weight: 600;
+      padding: 5px 0;
+      border: 1px solid #157c59; }
+      #contact .form-map #success div #close {
+        position: absolute;
+        padding: 5px 15px;
+        font-size: 12pt;
+        font-weight: 600;
+        right: 0;
+        cursor: pointer; }
+    #contact .form-map #success .expand {
+      height: 36px !important; }
+  #contact .form-map button {
+    float: right;
+    border-width: medium;
+    font-size: 12pt;
+    margin: 5px 0 0 0;
+    cursor: pointer; }
+
+footer {
+  background-color: #1E242C;
+  padding: 70px 0 50px 0;
+  position: relative; }
+  footer .page-link {
+    position: absolute;
+    top: -25px;
+    background: #E31B6D;
+    font-size: 30pt;
+    width: 47px;
+    height: 50px;
+    line-height: 40pt;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: background .5s;
+    color: #fff;
+    border: none;
+    padding-top: 0px; }
+    footer .page-link:hover {
+      color: white;
+      background-color: #E31B6D; }
+  footer .m-icon {
+    color: #fff;
+    overflow: hidden;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    text-align: center;
+    margin: 0 15px;
+    background: #262F38;
+    font-size: 18pt; }
+    footer .m-icon:hover {
+      background-color: #04C2C9; }
+  footer a:hover {
+    text-decoration: none; }
+  footer .footnote {
+    font-size: 10pt;
+    color: #8F9AA7;
+    margin-top: 35px;
+    opacity: 0.6; }
+
+@media (max-width: 576px) {
+  nav .container {
+    width: 100%; }
+    nav .container .nav-item {
+      font-size: 0.9rem; }
+  .hex1 {
+    width: 80px;
+    height: 80px; }
+  .hexagon i {
+    top: 17px; }
+  section {
+    line-height: 11pt;
+    padding: 70px 0; }
+  #home .primary-overlay .cover-head {
+    font-size: 16pt;
+    line-height: 25pt; }
+  #about .progress {
+    height: 22px;
+    font-size: 7pt;
+    max-width: calc(100% - 15px);
+    margin: 50px auto 0; }
+    #about .progress .progress-type {
+      width: 70px; }
+    #about .progress .progress-completed {
+      display: none; }
+  #projects {
+    line-height: 18pt; }
+    #projects .header-list .filter text {
+      font-size: 7pt;
+      overflow: hidden; }
+  #contact .short_msg {
+    font-size: 9pt; } }
+
+@media (max-width: 576px) {
+  .section-header .heading {
+    font-size: 25pt; }
+  #about img {
+    height: 220px;
+    width: 230px; }
+  #education .timeline .container-timeline .content .details .marks {
+    padding-top: 3px; }
+    #education .timeline .container-timeline .content .details .marks span {
+      font-size: 0.8rem; }
+  .label-head {
+    font-size: 14pt; }
+  .label-sub {
+    font-size: 8pt; } }
+
+@media (max-width: 760px) {
+  #education .timeline .container-timeline, #work .timeline .container-timeline {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px; }
+    #education .timeline .container-timeline .content h3, #work .timeline .container-timeline .content h3 {
+      color: #444649;
+      font-size: 15pt;
+      font-weight: 300; }
+    #education .timeline .container-timeline .content p, #work .timeline .container-timeline .content p {
+      font-size: 8pt;
+      letter-spacing: 1.5px; }
+  #education .timeline .container-timeline::before, #work .timeline .container-timeline::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #04C2C9 transparent transparent; }
+  #education .timeline .right, #work .timeline .right {
+    left: 0%; }
+  #education .timeline .left::after, #work .timeline .left::after {
+    left: 25px; }
+  #education .timeline .right::after, #work .timeline .right::after {
+    left: 25px; }
+  #education .timeline:after, #work .timeline:after {
+    left: 31px; } }
+
+@media (max-width: 344px) {
+  .section-header .heading {
+    font-size: 19pt; }
+  #work .timeline .container-timeline .content {
+    padding: 20px 12px; }
+    #work .timeline .container-timeline .content .date {
+      font-size: 10pt; }
+    #work .timeline .container-timeline .content h3 {
+      font-size: 12pt; }
+    #work .timeline .container-timeline .content p {
+      font-size: 8pt; }
+  #education .timeline .container-timeline .content h3 {
+    font-size: 12pt; }
+  #education .timeline .container-timeline .content .details .marks span {
+    font-size: 0.7rem; }
+  footer .m-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 12pt; } }
+
+@media (max-width: 1556px) {
+  #projects .gallery {
+    margin-left: 0;
+    margin-right: 0; } }
+
+.hameid-loader-overlay {
+  width: 100%;
+  height: 100%;
+  background: url("../img/preloader4.gif") center no-repeat #FFF;
+  z-index: 99999;
+  position: fixed; }
