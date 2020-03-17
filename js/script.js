@@ -193,7 +193,7 @@ $("#form-submit").on("click", function(){
          msg:$('#sender_message').val()
         };
     $.ajax({
-        url: "//formspree.io/sriharshashm@gmail.com",
+        url: "https://formspree.io/mgezyzen",
         method: "POST",
         data: {data},
         dataType: "json"
