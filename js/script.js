@@ -15,20 +15,18 @@ window.sr = ScrollReveal();
 sr.reveal('.heading-left', {
   origin: 'left',
   duration: 1000,
-  delay: 0,
+  delay: 5,
   rotate: {x:0, y:0,  z:0},
-  scale: 0,
-  distance: '10vw',
+  distance: '150px',
   mobile: false
 }, 0);
 
 sr.reveal('.heading-right', {
   origin: 'right',
   duration: 1000,
-  delay: 0,
+  delay: 5,
   rotate: {x:0, y:0,  z:0},
-  scale: 0,
-  distance: '10vw',
+  distance: '150px',
   mobile: false
 }, 0);
 
@@ -41,7 +39,7 @@ sr.reveal('.deco-line-left', {
   rotate: {x:0, y:0,  z:0},
   scale: 0,
   mobile: false,
-  distance: '10vw'
+  distance: '150px'
 }, 0);
 
 sr.reveal('.deco-line-right', {
@@ -51,13 +49,13 @@ sr.reveal('.deco-line-right', {
   rotate: {x:0, y:0,  z:0},
   scale: 0,
   mobile: false,
-  distance: '10vw'
+  distance: '150px'
 }, 0);
 
 
 // For Hexagons
 sr.reveal('.hexagon-wrapper', {
-    duration: 700, // time in animation
+    duration: 1700, // time in animation
     delay: 0, //how much time before animation starts
     rotate: {x:0, y:180,  z:0},
     scale: 0.9,
@@ -72,7 +70,7 @@ sr.reveal('.hexagon-wrapper', {
     duration: 1000,
     delay: 0,
     rotate: {x:0, y:0,  z:0},
-    scale: 0,
+    scale: 1,
     mobile: false,
     distance: '45%'
 }, 0);
@@ -93,10 +91,10 @@ sr.reveal('.progress', {
   origin: 'right',
   duration: 1000,
   delay: 0,
-  rotate: {x:0, y:0,  z:0},
+  rotate: {x:0, y:0, z:0},
   scale: 0,
   mobile: false,
-  distance: '10vw'
+  distance: '80%'
 }, 0);
 
 // Image Section in Projects
@@ -105,10 +103,10 @@ sr.reveal('.each-item', {
   duration: 800,
   opacity: 0,
   delay: 80,
-  rotate: {x:0, y:0,  z:0},
-  scale: 0,
+  rotate: {x:0, y:0, z:0},
+  scale: 0.8,
   mobile: false,
-  distance: '10rem'
+  distance: '50%'
 },100);
 
 // Timeline Section
@@ -121,7 +119,7 @@ sr.reveal('.work-container-effect', {
     rotate: {x:180, y:0,  z:0},
     scale: 0,
     mobile: false,
-    distance: '3vw'
+    distance: '50%'
 }, 200);
 
 // for education cards
@@ -132,7 +130,7 @@ sr.reveal('.edu-container-effect', {
   rotate: {x:0, y:180,  z:0},
   scale: 0,
   mobile: false,
-  distance: '3vw'
+  distance: '50%'
 }, 200);
 
 
@@ -144,13 +142,13 @@ sr.reveal('.msg_section', {
   rotate: {x:0, y:0,  z:0},
   scale: 0,
   mobile: false,
-  distance: '10vw'
+  distance: '150px'
 }, 0);
 
 // Contact Form
 sr.reveal('#contactform', {
     duration: 1500,
-    delay: 800
+    delay: 600
   });
 
 
@@ -193,7 +191,7 @@ $("#form-submit").on("click", function(){
          userName: $('#sender_name').val(),
          email: $('#sender_email').val(),
          msg:$('#sender_message').val()
-        }
+        };
     $.ajax({
         url: "//formspree.io/sriharshashm@gmail.com",
         method: "POST",
@@ -211,7 +209,7 @@ $("#form-submit").on("click", function(){
 // Code for closing banner
 $("#close").on("click", function(){
     $('#success').css("height","0px");
-})
+});
 
 
 // Code for Nav-Bar problem
